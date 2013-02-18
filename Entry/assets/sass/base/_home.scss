@@ -1,0 +1,161 @@
+.home-intro {
+
+	padding-bottom: 40px;
+	margin-bottom: 30px;
+	background: url(../images/home_intro_bg.png) no-repeat center bottom;
+	@include clearfix();
+}
+
+.home-intro-nav {
+
+	float: left;
+	@include clearfix();
+
+	li {
+
+		width: 252px;
+		float: left;
+		background: url(../images/home_intro_nav_split.png) no-repeat right center;
+
+		img {
+			display: block;
+			width: 240px;
+			height: 180px;
+			margin: 0 auto;
+		}
+
+		a.more {
+			display: block;
+			padding: 10px 0;
+			text-align: center;
+		}
+	}
+}
+
+.home-wechat {
+
+	float: right;
+	width: 1005px - (252px * 3);
+
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	h3,
+	p {
+		text-align: center;
+		padding: 0;
+		margin: 0;
+	}
+
+	h3 {
+		padding: 10px 0;
+	}
+
+	p {
+		line-height: 20px;
+	}
+}
+
+.home-service {
+
+	@include clearfix();
+}
+
+.home-principle {
+
+	width: 370px;
+	padding: 0 30px;
+	float: left;
+	background: url(../images/home_service_split.png) no-repeat right center;
+
+	h3 {
+		font-size: 0;
+		line-height: 0;
+		text-indent: -9999;
+		width: 350px;
+		height: 101px;
+		background: url(../images/home_principle_title.png) no-repeat;
+	}
+
+	p {
+		color: #333;
+		line-height: 16px;
+	}
+}
+
+.home-case {
+
+	width: 1005px - 430px;
+	float: right;
+}
+
+.home-case-nav {
+
+	padding-left: 60px;
+
+	li {
+
+		margin-bottom: 20px;
+		@include clearfix();
+
+		.pic {
+
+			position: relative;
+			width: 212px;
+			height: 137px;
+			margin-bottom: 10px;
+			border: solid 7px #fff;
+			@include box-shadow(0 0 10px rgba(0,0,0,.1));
+
+			float: left;
+
+			img {
+				display: block;
+				width: 212px;
+				height: 137px;
+			}
+
+			.typeof {
+
+				position: absolute;
+				width: 26px;
+				height: 30px;
+				background: #fff;
+				right: 0;
+				bottom: 0;
+				font-size: 16px;
+				text-align: center;
+				line-height: 34px;
+				color: #b2b2b2;
+				text-transform: uppercase;
+			}
+		}
+
+		.info {
+			margin-left: 252px;
+			@include clearfix();
+
+			a.title {
+				font-weight: bold;
+				color: #000;
+				line-height: 25px;
+			}
+
+			a.more {
+
+				float: right;
+				color: #bbb;
+				line-height: 24px;
+			}
+
+			p {
+				color: #333;
+				padding: 0;
+				margin: 0;
+				line-height: 18px;
+			}
+		}
+	}
+}

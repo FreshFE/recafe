@@ -1,0 +1,51 @@
+{{extends file="./layout.html"}}
+
+{{block 'mainarea'}}
+
+<ul class="breadcrumb">
+	<li><a href="__GROUP__/image">Image</a> <span class="divider">/</span></li>
+	<li class="active">List</li>
+</ul>
+
+<div class="section-title">
+	<h1>Image</h1>
+	<div class="bar">
+		<a href="__URL__/create" class="btn btn-primary"><i class="icon-plus-sign icon-white"></i> New</a>
+	</div>
+</div>
+
+<div class="section">
+
+	<table class="table table-hover table-striped">
+			
+		<thead>
+			<tr>
+				<td class="span1">ID</td>
+				<td class="span2">Thumb</td>
+				<td>Name</td>
+				<td>Size</td>
+				<td>extension</td>
+				<td>thumbname</td>
+			</tr>
+		</thead>
+
+		<tbody>
+
+			{{foreach $image as $value}}
+			<tr>
+				<td>#{{$value.id}}</td>
+				<td><a href="{{img($value['name'])}}" target="_blank" class="thumbnail"><img src="{{img($value['name'])}}"></a></td>
+				<td>{{$value.name}}</td>
+				<td>{{sizeformat($value['size'])}}</td>
+				<td>{{$value.extension}}</td>
+				<td>{{$value.thumbname}}</td>
+			</tr>
+			{{/foreach}}
+
+		</tbody>
+	</table>
+
+	{{$pageShow}}
+</div>
+
+{{/block}}

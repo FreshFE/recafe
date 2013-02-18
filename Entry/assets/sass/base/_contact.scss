@@ -1,0 +1,199 @@
+// @author 	minowu
+// @date 	2012/12/29
+// @email	minowu@foxmail.com
+
+@import "compass/css3";
+
+.contact-banner {
+
+	text-align: center;
+	padding: 20px 0;
+	padding-top: 200px;
+	background: url(../images/contact_banner.png) no-repeat center top;
+
+	h3 {
+		color: #333;
+		font-size: 24px;
+		margin: 0;
+		padding: 0;
+		font-weight: bold;
+	}
+
+	p {
+
+	}
+}
+
+.contact-link {
+
+	margin-bottom: 20px;
+	@include clearfix();
+
+	.info {
+		width: 402px;
+		float: left;
+
+		padding-bottom: 60px;
+		background: url(../images/contact_link.gif) no-repeat left bottom;
+
+		h2 {
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 20px;
+		}
+
+		h3 {
+			font-size: 14px;
+			font-weight: bold;
+			color: #414141;
+			padding: 0;
+			margin-bottom: 5px;
+		}
+
+		p {
+			font-size: 14px;
+			color: #777;
+			margin: 0;
+			padding: 0;
+			line-height: 22px;
+			font-weight: normal;
+
+			em {
+				font-weight: bold;
+				color: #000;
+			}
+		}
+
+		.block {
+			margin-bottom: 30px;
+		}
+	}
+
+	.map {
+		width: 579px;
+		float: right;
+	}
+}
+
+.contact-service {
+
+	min-height: 300px;
+	padding-top: 50px;
+	background: url(../images/contact_service_bg.jpg) no-repeat center top;
+
+	.hd {
+		h3 {
+			font-size: 28px;
+			margin: 0;
+			padding: 0;
+		}
+		p {
+			font-size: 28px;
+			margin: 0;
+			padding: 0;
+			color: #333;
+			text-transform: uppercase;
+		}
+	}
+
+	.bd {
+
+		@include clearfix();
+
+		.main {
+			width: 730px;
+			float: left;
+
+			strong {
+				font-size: 14px;
+				color: #000;
+				font-weight: normal;
+			}
+
+			em {
+				color: #920000;
+				font-size: 16px;
+				font-weight: bold;
+			}
+
+			.block {
+
+				width: 230px;
+				float: left;
+				margin-right: 5px;
+			}
+		}
+
+		.side {
+			width: 254px;
+			height: 200px;
+			padding-left: 20px;
+			float: right;
+
+			background: url(../images/contact_service_split.gif) no-repeat left top;
+
+			h5 {
+				padding: 0;
+				margin: 0;
+				margin-bottom: 20px;
+			}
+
+			.t-qq,
+			.t-mail {
+				font-size: 0;
+				line-height: 0;
+				text-indent: -9999px;
+			}
+
+			.t-qq {
+				width: 120px;
+				height: 60px;
+				margin-bottom: 20px;
+				background: url(../images/contact_qq.jpg) no-repeat 0 0;
+			}
+
+			.t-mail {
+				width: 228px;
+				height: 64px;
+				background: url(../images/contact_mail.jpg) no-repeat 0 0;
+			}
+		}
+
+		form {
+
+			input,
+			label {
+				display: block;
+			}
+
+			label {
+				font-size: 12px;
+				color: #6e6e6e;
+				line-height: 26px;
+			}
+
+			input,
+			textarea {
+				width: 220px;
+				line-height: 18px;
+				padding: 2px;
+				border: none;
+				border: solid 1px #c7c6c2;
+				background: #F1EFE9;
+				outline: 0;
+
+				&:focus {
+					border-color: #666;
+				}
+			}
+
+			input {
+				height: 18px;
+			}
+
+			textarea {
+				resize: none;
+			}
+		}
+	}
+}

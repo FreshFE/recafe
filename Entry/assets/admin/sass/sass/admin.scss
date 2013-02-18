@@ -1,0 +1,111 @@
+@import "compass";
+
+// 布局
+body {
+}
+
+#header {
+	@include clearfix();
+}
+
+#header .layout {
+	max-width: 1200px;
+	margin: 0 auto;
+
+	.brand {
+		display: block;
+		width: 180px;
+		padding: 0;
+		margin: 0;
+		height: 38px;
+	}
+}
+
+#content {
+	padding: 0 20px;
+	min-width: 940px;
+	max-width: 1200px;
+	padding-top: 41px;
+	margin: 0 auto;
+}
+
+#footer {
+	max-width: 1200px;
+	margin: 0 auto;
+
+	> .inner {
+		color: #bbb;
+		font-size: 10px;
+		padding: 5px 0;
+		padding-left: 185px;
+	}
+}
+
+// 主体
+.mainarea {
+	margin-left: 180px;
+	min-height: 600px;
+	border: solid 1px #ddd;
+	border-top: none;
+	background: #fff;
+	@include border-bottom-radius(2px);
+	@include box-shadow(0 0 10px rgba(0,0,0,.1));
+
+	> .inner {
+		padding: 20px 40px;
+	}
+}
+
+// 侧边栏
+.sidebar {
+	width: 160px;
+	padding-top: 20px;
+	float: left;
+
+	> .inner {
+		position: fixed;
+		width: 160px;
+	}
+}
+
+.nav-sidebar {
+	> li {
+		> a {
+			padding: 6px 15px;
+			@include border-radius(0);
+			@include border-radius(2px);
+			@include clearfix();
+			> i {
+				float: right;
+				opacity: .5;
+			}
+		}
+
+		&.active {
+			> a {
+				> i {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+.section-title {
+	border-bottom: solid 1px #e5e5e5;
+	margin-bottom: 20px;
+	@include clearfix();
+
+	h1 {
+		float: left;
+		font-size: 21px;
+		line-height: 40px;
+		margin: 0;
+		padding: 0;
+		font-weight: normal;
+	}
+
+	.bar {
+		float: right;
+	}
+}

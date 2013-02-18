@@ -1,0 +1,74 @@
+.client-form-banner {
+
+	height: 169px;
+	padding: 40px 0;
+	line-height: 0;
+	font-size: 0;
+	text-indent: -9999;
+	background: url(../images/client_form_banner.png) no-repeat center;
+}
+
+.client-form {
+
+	width: 308px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+
+	.form {
+
+		.control-label {
+
+			text-align: left;
+			width: 50px;
+		}
+
+		.controls {
+
+			margin-left: 50px;
+		}
+	}
+}
+
+.client-form-tip {
+
+	padding: 0 250px;
+	color: #414141;
+	border-top: solid 1px #dadada;
+
+	h3 {
+		font-size: 12px;
+		font-weight: normal;
+	}
+
+	ol {
+
+		padding-left: 20px;
+
+		li {
+			color: #414141;
+			line-height: 20px;
+		}
+	}
+
+	p {
+		padding-left: 20px;
+		color: #8b8b8b;
+	}
+}
+
+.client-view {
+
+	text-align: center;
+
+	.showbox {
+
+		width: 800px;
+		margin: 0 auto;
+
+		img {
+			width: 800px;
+			min-height: 350px;
+			@include box-shadow(0 0 5px rgba(0,0,0,.1));
+		}
+	}
+}

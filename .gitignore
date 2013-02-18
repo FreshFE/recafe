@@ -1,0 +1,12 @@
+App/Runtime/Cache/*
+App/Runtime/Data/*
+App/Runtime/Logs/*
+App/Runtime/Temp/*
+Entry/upload/*
+Document/*
+
+.sass-cache/*
+*.scssc
+
+Entry/index.php
+App/Conf/app.php

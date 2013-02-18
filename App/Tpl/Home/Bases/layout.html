@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Re::Cafe</title>
+
+	<link rel="stylesheet" type="text/css" href="@/assets/css/base.css">
+
+	{{block 'js'}}
+	<script type="text/javascript" src="@/assets/js/jquery.js"></script>
+	{{/block}}
+
+</head>
+<body>
+
+	<div id="header">
+	</div>
+
+	<div id="banner">
+		<div class="layout">
+			{{block 'banner'}}
+			{{/block}}
+		</div>
+	</div>
+
+	<div id="content">
+		<div class="layout">
+			{{block 'content'}}
+			{{/block}}
+		</div>
+	</div>
+
+	<div id="footer">
+	</div>
+
+	{{block 'bodyjs'}}
+	{{/block}}
+
+</body>
+</html>

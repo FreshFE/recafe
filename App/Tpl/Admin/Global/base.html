@@ -1,0 +1,54 @@
+{{extends file="./layout.html"}}
+
+{{block 'mainarea'}}
+	
+	<ul class="breadcrumb">
+		<li><a href="#">Global</a> <span class="divider">/</span></li>
+		<li class="active">Base</li>
+	</ul>
+
+	<div class="section">
+		<form action="#" method="post" class="form-horizontal">
+			<fieldset>
+				<legend>Base Setting</legend>
+			</fieldset>
+
+			<div class="control-group">
+				<div class="control-label">Website Title</div>
+				<div class="controls">
+					<input type="text">
+				</div>
+			</div>
+
+			<div class="control-group">
+				<div class="control-label">Domain</div>
+				<div class="controls">
+					<div class="input-prepend">
+						<span class="add-on">http://</span>
+						<input type="text">
+					</div>
+				</div>
+			</div>
+
+			<div class="control-group">
+				<div class="control-label">Keywords</div>
+				<div class="controls">
+					<input type="text" class="span5">
+				</div>
+			</div>
+
+			<div class="control-group">
+				<div class="control-label">description</div>
+				<div class="controls">
+					<textarea class="span5" rows="8"></textarea>
+				</div>
+			</div>
+
+			<div class="form-actions">
+				<button type="submit" class="btn btn-primary">Save changes</button>
+				<button type="button" class="btn">Cancel</button>
+			</div>
+		</form>
+	</div>
+
+{{/block}}

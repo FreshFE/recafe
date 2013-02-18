@@ -1,0 +1,37 @@
+{{extends file="./layout.html"}}
+
+{{block 'mainarea'}}
+	
+	<ul class="breadcrumb">
+		<li><a href="#">Global</a> <span class="divider">/</span></li>
+		<li class="active">About</li>
+	</ul>
+
+	<div class="section">
+		<form action="#" method="post" class="form-horizontal">
+			<fieldset>
+				<legend>About us</legend>
+			</fieldset>
+
+			<div class="control-group">
+				<div class="control-label">Office address</div>
+				<div class="controls">
+					<input type="text" class="span5">
+				</div>
+			</div>
+
+			<div class="control-group">
+				<div class="control-label">Introduction</div>
+				<div class="controls">
+					<textarea class="span5" rows="8"></textarea>
+				</div>
+			</div>
+
+			<div class="form-actions">
+				<button type="submit" class="btn btn-primary">Save changes</button>
+				<button type="button" class="btn">Cancel</button>
+			</div>
+		</form>
+	</div>
+
+{{/block}}

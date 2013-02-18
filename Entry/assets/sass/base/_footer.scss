@@ -1,0 +1,69 @@
+#footer {
+	width: 100%;
+	height: 262px;
+	background: url(../images/footer_bg.png) repeat-x;
+
+	.layout {
+		position: relative;
+	}
+
+	.vice {
+		position: absolute;
+		top: -45px;
+		left: 0;
+		width: 83px;
+		height: 237px;
+		background: url(../images/footer_vice_bg.png) no-repeat;
+	}
+
+	.main {
+		position: absolute;
+		top: 0;
+		left: 120px;
+
+		.block {
+
+			float: left;
+			margin-right: 100px;
+
+			.title {
+				height: 55px;
+				margin-bottom: 10px;
+				line-height: 0;
+				font-size: 0;
+
+				&.t-friend-link {
+					width: 167px;
+					background: url(../images/footer_friend_link_bg.png) no-repeat 0 15px;
+				}
+
+				&.t-share {
+					width: 167px;
+					background: url(../images/footer_share_bg.png) no-repeat 0 15px;
+				}
+
+				&.t-contact {
+					width: 167px;
+					background: url(../images/footer_contact_bg.png) no-repeat 0 15px;
+				}
+			}
+
+			.nav {
+
+				li {
+
+					line-height: 20px;
+
+					a {
+						color: #333;
+						text-decoration: none;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+}

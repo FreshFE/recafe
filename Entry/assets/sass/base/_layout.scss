@@ -1,0 +1,48 @@
+a, p {
+	font-size: 12px;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+
+	&:hover {
+		color: #000;
+		text-decoration: underline;
+	}
+}
+
+p {
+	color: #7a7a7a;
+
+	&.signleline {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+ul,
+ol {
+	font-size: 12px;
+}
+
+.nav {
+	&,
+	li {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		font-size: 12px;
+	}
+}
+
+body {
+	background: #f1efe9;
+}
+
+.layout {
+	width: 1005px;
+	margin-left: auto;
+	margin-right: auto;
+}
+

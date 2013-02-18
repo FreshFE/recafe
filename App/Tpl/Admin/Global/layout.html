@@ -1,0 +1,14 @@
+{{extends file="../Bases/layout.html"}}
+
+{{block 'sidebar'}}
+	
+<ul class="nav nav-pills nav-stacked nav-sidebar">
+	<li {{active('global/base')}}><a href="__GROUP__/global/base"><i class="icon-chevron-right"></i>Base</a></li>
+	<li {{active('sitemap/*')}}><a href="__GROUP__/sitemap"><i class="icon-chevron-right"></i>Site map</a></li>
+	<!-- <li {{active('school/*')}}><a href="__GROUP__/school"><i class="icon-chevron-right"></i>School Apply</a></a></li>
+	<li {{active('contact/*')}}><a href="__GROUP__/contact"><i class="icon-chevron-right"></i>Contact</a></li>
+	<li {{active('global/about')}}><a href="__GROUP__/global/about"><i class="icon-chevron-right"></i>About</a></li> -->
+	<!-- <li><a href="javascript:void(0);"><i class="icon-chevron-right"></i>Analytics</a></li> -->
+</ul>
+
+{{/block}}

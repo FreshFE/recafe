@@ -1,0 +1,18 @@
+{{extends file="../Bases/layout.html"}}
+
+{{block 'content'}}
+	
+	<ul>
+
+		{{foreach $data as $value}}
+
+			<li>
+				<h2>{{$value.title}}</h2>
+				<p>{{$value.price}}</p>
+			</li>
+
+		{{/foreach}}
+
+	</ul>
+
+{{/block}}

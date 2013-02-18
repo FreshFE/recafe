@@ -1,0 +1,102 @@
+{{extends file="./layout.html"}}
+
+{{block 'mainarea'}}
+
+	<ul class="breadcrumb">
+		<li><a href="__GROUP__/news">News</a> <span class="divider">/</span></li>
+		<li class="active">edit</li>
+	</ul>
+
+	<div class="section">
+		<form action="__SELF__" method="post" class="form-horizontal">
+			<fieldset>
+				<legend>Edit</legend>
+			</fieldset>
+
+			<div class="control-group">
+				<label class="control-label">Title</label>
+				<div class="controls">
+					<input type="text" name="title" value="{{$data.title}}">
+				</div>
+			</div>
+
+			<div class="control-group">
+				<label class="control-label">Category</label>
+				<div class="controls">
+					<select name="cid">
+						{{foreach $category as $value}}
+						<option value="{{$value.cid}}" {{if $data.cid == $value.cid}}selected="selected"{{/if}}>{{$value.fullname}}</option>
+						{{/foreach}}
+					</select>
+				</div>
+			</div>
+
+			<div class="control-group">
+				<label class="control-label">Content</label>
+				<div class="controls">
+					<textarea class="ckeditor" name="content">{{$data.content}}</textarea>
+				</div>
+			</div>
+
+			<div class="control-group">
+				<label class="control-label">Images</label>
+				<div class="controls" id="placePhoto">
+				</div>
+			</div>
+
+			<div class="control-group">
+				<label class="control-label">Upload Images</label>
+				<div class="controls">
+					<input type="file" id="uploadPhoto" name="file_upload">
+				</div>
+			</div>
+
+			<div class="form-actions">
+				<input type="hidden" name="id" value="{{$data.id}}">
+				<button type="submit" class="btn btn-primary">Save changes</button>
+				<a href="__URL__/index" class="btn">Cancel</a>
+			</div>
+		</form>
+	</div>
+
+{{/block}}
+
+{{block 'bodyjs' append}}
+	<script type="text/javascript" src="@/admin/js/ckeditor/ckeditor.js"></script>
+
+	<!-- Uploadify -->
+	<script type="text/javascript" src="@/admin/js/uploadify/jquery.uploadify.js"></script>
+	<script type="text/javascript" src="@/admin/js/uploadify/uploadify.config.js"></script>
+	<link rel="stylesheet" type="text/css" href="@/admin/js/uploadify/uploadify.css">
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			var $placePhoto = $('#placePhoto');
+			var uploadImg = new UploadImg('#uploadPhoto');
+
+			uploadImg.onUploadSuccess = function(file, data, response) {
+
+			    var info = $.parseJSON(data);
+
+			    $('<img>')
+			    	.attr('src', "{{C('PROJ_IMAGE_VIEW_PATH')}}120x120/" + info.name)
+			    	.data('name', info.name)
+			    	.appendTo($placePhoto);
+
+			};
+
+			uploadImg.upload('__URL__/image');
+
+			$placePhoto.delegate('img', 'click', function(){
+
+			    var name = $(this).data('name');
+			    var editor = CKEDITOR.instances.content;
+			    var value = '<img src="{{C('PROJ_IMAGE_VIEW_PATH')}}o/'+name+'">'
+			    editor.insertHtml(value);
+			    return false;
+			});
+
+		});
+	</script>
+{{/block}}

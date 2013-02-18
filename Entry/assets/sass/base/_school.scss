@@ -1,0 +1,174 @@
+.school-priceform-banner {
+	padding: 30px 0;
+}
+
+.school-intro {
+
+	@include clearfix();
+	margin-bottom: 20px;
+
+	.main {
+		width: 730px;
+		float: left;
+		line-height: 18px;
+
+		background: url(../images/school_intro_bg.png) no-repeat right center;
+
+		h2,
+		p {
+			margin: 0;
+			padding: 0;
+		}
+
+		h2 {
+			margin-bottom: 10px;
+			font-size: 16px;
+		}
+	}
+
+	.reg {
+
+		float: right;
+		padding: 50px 50px 0 0;
+
+		a {
+			width: 172px;
+			height: 61px;
+			display: block;
+			background: url(../images/school_intro_reg.png) no-repeat 0 0;
+			font-size: 0;
+			line-height: 0;
+			text-indent: -9999;
+		}
+	}
+}
+
+.school-priceform {
+	width: 840px;
+	min-height: 300px;
+	background: #fff;
+	margin-bottom: 20px;
+	padding: 40px 82px;
+
+	@include box-shadow(0 3px 5px rgba(0,0,0,.1));
+
+	h1 {
+		width: 285px;
+		height: 43px;
+		margin: 0 auto;
+		line-height: 0;
+		font-size: 0;
+		text-indent: -9999;
+		margin-bottom: 20px;
+		background: url(../images/school_priceform_title.png) no-repeat 0 0;
+	}
+
+	table {
+
+		width: 100%;
+		font-size: 12px;
+
+		td {
+			padding: 5px;
+			text-align: center;
+		}
+
+		thead {
+			border-top: solid 3px #898989;
+			td {
+				padding-top: 10px;
+				padding-bottom: 10px;
+
+				&.t-course {
+					width: 300px;
+					text-align: left;
+				}
+			}
+		}
+
+		tbody {
+
+			color: #787776;
+
+			tr {
+				border-top: solid 1px #b7b8b8;
+			}
+
+			td {
+				height: 50px;
+			}
+		}
+
+		ol {
+			text-align: left;
+			padding-left: 18px;
+		}
+	}
+}
+
+.school-statement {
+
+	@include clearfix();
+
+	.main {
+		width: 600px;
+		float: left;
+		color: #666;
+
+		h3 {
+			font-size: 12px;
+		}
+
+		ol {
+			padding-left: 20px;
+		}
+	}
+
+	.download {
+		float: right;
+		padding: 0 30px 0 0;
+
+		a {
+			display: block;
+			width: 117px;
+			height: 106px;
+			font-size: 0;
+			line-height: 0;
+			text-indent: -9999;
+			background: url(../images/school_statement_bg.png) no-repeat 0 0;
+		}
+	}
+}
+
+.school-apply {
+
+	.applyform {
+
+		position: relative;
+		width: 685px;
+		height: 832px;
+		margin: 0 auto;
+		background: url(../images/school_apply_form.png) no-repeat 0 0;
+	}
+
+	input[type="text"] {
+
+		display: block;
+		position: absolute;
+		width: 100px;
+		height: 18px;
+		line-height: 18px;
+		font-size: 12px;
+
+		background: none;
+		border: none;
+		outline: none;
+	}
+
+	input[type="checkbox"],
+	input[type="radio"] {
+
+		display: block;
+		position: absolute;
+	}
+}

@@ -1,0 +1,42 @@
+{{extends file="./layout.html"}}
+
+{{block 'mainarea'}}
+
+<ul class="breadcrumb">
+	<li><a href="__GROUP__/image">Image</a> <span class="divider">/</span></li>
+	<li class="active">Edit</li>
+</ul>
+
+<div class="section">
+	<form action="__SELF__" method="post" class="form-horizontal" enctype="multipart/form-data">
+		<fieldset>
+			<legend>Edit</legend>
+		</fieldset>
+
+		<div class="control-group">
+			<label class="control-label">Images</label>
+			<div class="controls">
+				<input type="file" name="image_field">
+			</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label">Thumb Type</label>
+			<div class="controls">
+				{{foreach $thumbType as $value}}
+				<label class="checkbox">
+					<input type="checkbox" name="thumbtype[]" value="{{$value}}">
+					{{$value}}
+				</label>
+				{{/foreach}}
+			</div>
+		</div>
+
+		<div class="form-actions">
+			<button type="submit" class="btn btn-primary">Save changes</button>
+			<a href="__URL__/index" class="btn">Cancel</a>
+		</div>
+	</form>
+</div>
+
+{{/block}}

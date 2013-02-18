@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{block 'title'}}Methink | Administration{{/block}}</title>
+	{{block 'css'}}
+	<link rel="stylesheet" type="text/css" href="@/admin/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="@/admin/css/admin.css">
+	{{/block}}
+	{{block 'js'}}
+	<script type="text/javascript" src="@/admin/js/jquery.js"></script>
+	<script type="text/javascript" src="@/admin/js/bootstrap.min.js"></script>
+	{{/block}}
+</head>
+<body>
+
+	<div id="header">
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="layout">
+					<a class="brand" href="__GROUP__"></a>
+
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li{{active('global/*')}}><a href="__GROUP__/global">Global</a></li>
+							<li{{active('image/*')}}><a href="__GROUP__/image">Image</a></li>
+							<li{{active('food/*')}}><a href="__GROUP__/food">Food</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="content">
+		<div class="sidebar">
+			<div class="inner">
+				{{block 'sidebar'}}
+				{{/block}}
+			</div>
+		</div>
+
+		<div class="mainarea">
+			<div class="inner">
+				{{block 'mainarea'}}
+				{{/block}}
+			</div>
+		</div>
+	</div>
+
+	<div id="footer">
+		<div class="inner">
+			2004-2013&copy;Methink of <span title="The Royuan and Great World Group">The RG</span>
+		</div>
+	</div>
+
+	{{block 'bodyjs'}}
+	{{/block}}
+
+</body>
+</html>
