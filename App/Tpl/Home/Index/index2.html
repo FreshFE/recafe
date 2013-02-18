@@ -1,0 +1,21 @@
+{{extends file="../Bases/layout.html"}}
+
+{{block 'content'}}
+	
+	<form action="__SELF__" method="post">
+		<button type="submit">点一点，看看给你推荐什么好喝的？</button>
+	</form>
+
+	{{if $value}}
+
+		<h1>推荐您尝试:</h1>
+
+		<h3>{{$value.title}} | ￥{{$value.price}}</h3>
+
+		<p>{{$value.content}}</p>
+
+		<img src="{{img($value['coverpath'])}}" width="400">
+
+	{{/if}}
+
+{{/block}}

@@ -1,21 +1,62 @@
-{{extends file="../Bases/layout.html"}}
+<!DOCTYPE html>
+<html>
+<head>
 
-{{block 'content'}}
-	
-	<form action="__SELF__" method="post">
-		<button type="submit">点一点，看看给你推荐什么好喝的？</button>
-	</form>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	{{if $value}}
+	<title>Re::Cafe</title>
 
-		<h1>推荐您尝试:</h1>
+	<link href="@/admin/css/bootstrap.css" rel="stylesheet">
+	<link href="@/admin/css/responsive.css" rel="stylesheet">
 
-		<h3>{{$value.title}} | ￥{{$value.price}}</h3>
+	<style type="text/css">
 
-		<p>{{$value.content}}</p>
+		.navbar-fixed-top {
+			position: static;
+		}
 
-		<img src="{{img($value['coverpath'])}}" width="400">
+		#content {
+			padding-top: 40px;
+		}
 
-	{{/if}}
+		#img {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
 
-{{/block}}
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="brand" href="#">Re::Cafe</a>
+			</div>
+		</div>
+	</div>
+
+		<div class="container">
+
+			<div class="row">
+				<form action="__SELF__" method="post">
+					<button type="submit" class="btn btn-primary btn-large" style="width: 100%;">
+						<i class="icon-heart icon-white"></i>
+						按一按
+					</button>
+				</form>			
+			</div>
+
+			<div class="row">
+				<img src="{{img($value['coverpath'])}}" class="img-rounded" id="img">
+				<div class="well">
+					<h1>推荐您尝试:</h1>
+					<h3>{{$value.title}} | ￥{{$value.price}}</h3>
+					<p>{{$value.content}}</p>
+				</div>
+			</div>
+
+		</div>
+
+</body>
+</html>
