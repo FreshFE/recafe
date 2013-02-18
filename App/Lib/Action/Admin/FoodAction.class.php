@@ -9,6 +9,6 @@ class FoodAction extends NewsAction {
 	protected $modelName = 'Food';
 
 	// 封面缩略图
-	protected $coverThumbSize = '500width';
+	protected $coverThumbSize = '212x137,500width';
 	
 }
