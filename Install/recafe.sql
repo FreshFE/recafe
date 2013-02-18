@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013 年 02 月 17 日 17:30
+-- 生成日期: 2013 年 02 月 18 日 08:51
 -- 服务器版本: 5.5.25
 -- PHP 版本: 5.4.4
 
@@ -23,31 +23,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- 表的结构 `category`
---
-
-CREATE TABLE IF NOT EXISTS `category` (
-  `cid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `fid` int(10) unsigned NOT NULL,
-  `name` varchar(45) NOT NULL,
-  `fullname` varchar(45) NOT NULL,
-  `priority` tinyint(3) unsigned NOT NULL,
-  PRIMARY KEY (`cid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
-
---
--- 转存表中的数据 `category`
---
-
-INSERT INTO `category` (`cid`, `fid`, `name`, `fullname`, `priority`) VALUES
-(1, 0, 'Food', '', 1),
-(2, 1, '咖啡', '', 1),
-(3, 1, '果汁', '', 2),
-(4, 1, '快餐', '', 3);
-
--- --------------------------------------------------------
-
---
 -- 表的结构 `food`
 --
 
@@ -63,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `food` (
   `coverpath` char(26) NOT NULL,
   `price` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- 转存表中的数据 `food`
@@ -75,7 +50,8 @@ INSERT INTO `food` (`id`, `cid`, `title`, `content`, `hidden`, `updateline`, `cr
 (3, 2, 'Espresso ', '', 1, 1361116873, 1361116818, 1361116800, '2013/08/5120fec64757d.jpg', 18),
 (4, 2, '美式咖啡', '', 1, 1361116982, 1361116889, 1361116800, '2013/08/5120ff32e5a01.jpg', 18),
 (5, 2, '卡布奇诺', '', 1, 1361117014, 1361116985, 1361116800, '2013/08/5120ff5429139.jpg', 32),
-(6, 2, '焦糖玛奇朵', '', 1, 1361117035, 1361117017, 1361116800, '2013/08/5120ff690c491.jpg', 32);
+(6, 2, '焦糖玛奇朵', '', 1, 1361117035, 1361117017, 1361116800, '2013/08/5120ff690c491.jpg', 32),
+(7, 2, 'Happy birthday', '', 1, 1361173709, 1361151980, 1361116800, '2013/08/5121dccb5c535.jpg', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
