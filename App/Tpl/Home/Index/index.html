@@ -47,6 +47,7 @@
 				</form>			
 			</div>
 
+			{{if $value}}
 			<div class="row">
 				<img src="{{img($value['coverpath'])}}" class="img-rounded" id="img">
 				<div class="well">
@@ -55,6 +56,7 @@
 					<p>{{$value.content}}</p>
 				</div>
 			</div>
+			{{/if}}
 
 		</div>
 
