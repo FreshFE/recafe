@@ -49,7 +49,7 @@
 
 			{{if $value}}
 			<div class="row">
-				<img src="{{img($value['coverpath'])}}" class="img-rounded" id="img">
+				<img src="{{img($value['coverpath'], '500width')}}" class="img-rounded" id="img">
 				<div class="well">
 					<h1>推荐您尝试:</h1>
 					<h3>{{$value.title}} | ￥{{$value.price}}</h3>
