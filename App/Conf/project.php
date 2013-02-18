@@ -51,7 +51,9 @@ return array(
 
 		// Shop 列表缩略图和示范Photo
 		'210x184' => array(210, 184, 'both'),
-		'424width' => array(424, 424, 'width')
+		'424width' => array(424, 424, 'width'),
+
+		'500width' => array(500, 500, 'width')
 	),
 
 	// 图片游览地址
