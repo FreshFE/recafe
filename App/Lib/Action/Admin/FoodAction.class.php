@@ -1,6 +1,6 @@
 <?php
 
-class FoodAction extends NewsAction {
+class FoodAction extends ContentAdminExtendAction {
 
 	// 默认分类编号
 	protected $cid = 1;

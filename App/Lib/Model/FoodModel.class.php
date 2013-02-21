@@ -1,5 +1,5 @@
 <?php
 
-class FoodModel extends ArticleModel {
+class FoodModel extends ContentAdminExtendModel {
 
 }

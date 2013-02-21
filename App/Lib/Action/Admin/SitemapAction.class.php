@@ -1,6 +1,6 @@
 <?php
 
-class SitemapAction extends CommonAction {
+class SitemapAction extends AdminExtendAction {
 
 	/**
 	 * 页面索引

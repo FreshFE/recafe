@@ -1,6 +1,6 @@
 <?php
 
-class ImageAction extends CommonAction {
+class ImageAction extends AdminExtendAction {
 
 	private $basePath = './upload/images/';
 

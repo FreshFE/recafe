@@ -1,6 +1,6 @@
 <?php
 
-class GlobalAction extends Action {
+class GlobalAction extends AdminExtendAction {
 
 
 	public function index() {

@@ -1,6 +1,6 @@
 <?php
 
-class BannerAction extends NewsAction {
+class BannerAction extends ContentAdminExtendAction {
 
 	// 默认分类编号
 	protected $cid = 44;
